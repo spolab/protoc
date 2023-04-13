@@ -10,7 +10,7 @@ inputs:
 
 runs:
     using: 'docker'
-    image: 'docker://ghcr.io/spolab/spolab:v0.0.8'
+    image: 'docker://ghcr.io/spolab/spolab:v0.0.9'
     args:
       - ${{ inputs.args }}
 
