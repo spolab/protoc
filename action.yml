@@ -10,7 +10,7 @@ inputs:
 
 runs:
     using: 'docker'
-    image: 'ghcr.io/spolab/protoc-action:v0.0.10'
+    image: 'docker://ghcr.io/spolab/protoc-action:v0.0.10'
     args:
       - ${{ inputs.args }}
 
