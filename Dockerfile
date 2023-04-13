@@ -1,5 +1,12 @@
 FROM alpine
 
+LABEL org.opencontainers.image.title="Protoc Action" \
+      org.opencontainers.image.description="A GitHub Action to execute protoc in a workflow" \
+      org.opencontainers.image.version="0.0.2" \
+      org.opencontainers.image.source="https://github.com/spolab/protoc-action" \
+      org.opencontainers.image.documentation="https://github.com/spolab/protoc-action/blob/main/README.md
+
+
 # Install protobuf-compiler and curl
 RUN apk add --no-cache protobuf curl
 
