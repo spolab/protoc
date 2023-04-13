@@ -1,0 +1,19 @@
+name: Release Worklow
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Release Docker Image
+        uses: docker/build-push-action@v4
+        with:
+          platforms: linux/amd64,linux/arm/v7,linux/arm64
+          tags: ghcr.io/spolab/protoc-action:${{ github.ref_name }}
+          labels: ${{steps.meta.outputs.labels}}
+          push: true
