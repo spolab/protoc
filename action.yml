@@ -1,0 +1,19 @@
+name: 'Protoc Helper'
+description: 'Runs the protoc tool and includes the golang plugin'
+author: '@spolab'
+
+inputs:
+  args:
+    description: 'Arguments for protoc'
+    required: true
+    default: '-h'
+
+runs:
+    using: 'docker'
+    image: 'docker://ghcr.io/spolab/spolab:v0.0.7'
+    args:
+      - ${{ inputs.args }}
+
+branding:
+  icon: 'command'
+  color: 'blue'
