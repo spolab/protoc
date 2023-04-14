@@ -2,9 +2,7 @@
 
 set -e
 
-echo "Current directory $(PWD)"
-
-echo "$(ls -la)"
+echo "Received the following parameters: $@"
 
 # Run protoc with the provided arguments
-protoc "$@"
+protoc $@
